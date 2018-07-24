@@ -10,7 +10,9 @@ app.use(logger("dev"));
 app.use(express.json());
 
 app.use("/", index);
-app.use("/books", books);
-app.use("/authors", authors);
+books(app)
+authors(app)
+// app.use("/books", books);
+// app.use("/authors", authors);
 
 module.exports = app;

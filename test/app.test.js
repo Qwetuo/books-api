@@ -4,9 +4,9 @@ const request = require("supertest");
 const MongodbMemoryServer = require("mongodb-memory-server").default;
 const mongod = new MongodbMemoryServer();
 const mongoose = require("mongoose");
-const Author = require("./models/author");
+const Author = require("../models/author");
 
-const app = require("./app");
+const app = require("../app");
 
 async function addFakeAuthors() {
   const author1 = new Author({
