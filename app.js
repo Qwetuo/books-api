@@ -1,5 +1,6 @@
 const express = require("express");
 const logger = require("morgan");
+const cors = require("cors")
 
 const index = require("./routes/index");
 const books = require("./routes/books.js");
@@ -10,6 +11,7 @@ app.use(logger("dev"));
 app.use(express.json());
 
 app.use("/", index);
+app.use(cors())
 books(app)
 authors(app)
 // app.use("/books", books);
