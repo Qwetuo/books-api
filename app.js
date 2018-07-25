@@ -9,7 +9,7 @@ const authors = require("./routes/authors.js");
 const app = express();
 app.use(logger("dev"));
 app.use(express.json());
-if (process.env.NODE + ENV === "production") {
+if (process.env.NODE.ENV === "production") {
   app.use(
     cors({
       origin: process.env.ALLOWED_ORIGIN
